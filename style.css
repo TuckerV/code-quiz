@@ -14,3 +14,12 @@
 button {
     margin-right: 10px;
 }
+
+#correctOrNot {
+    color: limegreen;
+    font-size: xxlarge;
+}
+
+.incorrect {
+    color: red;
+}
