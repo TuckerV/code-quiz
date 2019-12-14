@@ -5,10 +5,13 @@
   var wordsPerMillisecond = 4000;
   var i = 0;
   var finalScore = 0;
-
+  var correctOrNo = $("#correctOrNot");
   var score = (wordsPerMillisecond/1000)*(questions.length +1);
 
   $(".startBtn").on("click", function(){
+    $(".startBtn").text("Testing in Progress")
+    $("p").empty();
+    resetGame();
     addButtons();
     startTimer();
     clearInterval(wordsPerMillisecond);
@@ -31,6 +34,7 @@
       var poemInterval = setInterval(function() {
         if (i < questions.length){
           changeQuestion(i);
+          i++;
           if (i === 0) {
             $("#btn-choice-" + questions[i].answer).one("click", function(){
               $("#correctOrNot").text("CORRECT 1");
@@ -51,13 +55,12 @@
               finalScore = score;
               alert(finalScore);
               resetGame();
-              return score
+              scoreScreen();
             })
             $("#btn-choice-0").one("click", function(){$("#correctOrNot").text("INCORRECT");})
             $("#btn-choice-1").one("click", function(){$("#correctOrNot").text("INCORRECT");})
             $("#btn-choice-2").one("click", function(){$("#correctOrNot").text("INCORRECT");})
-          }
-          i++;
+          } 
         } 
       }, wordsPerMillisecond);
   };
@@ -93,4 +96,12 @@
     $("#main").append(d);
     var e = $('<div class="row"><div id="correctOrNot"></div></div>');
     $("#main").append(e);
+};
+function scoreScreen() {
+  var f = $('<div class="row">Your Final Score: <div id="playerScore"></div></div>');
+    $("#main").append(f);
+  $("#playerScore").text(finalScore);
+  var g = $('<form action="/action_page.php"><input type="text" name="lastName" id="nameBox" placeholder="Your Name Here"><br><br><input type="submit" value="Submit Score"></form>');
+  $("#main").append(g);
+  $(".startBtn").text("Restart");
 };

@@ -23,3 +23,7 @@ button {
 .incorrect {
     color: red;
 }
+
+#nameBox {
+    border: solid 2px black;
+}
