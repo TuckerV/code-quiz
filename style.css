@@ -11,13 +11,13 @@
     /* border: dotted 2px black; */
     padding: 2px;
 }
-button {
+choices {
     margin-right: 10px;
 }
 
-#correctOrNot {
-    color: limegreen;
-    font-size: xxlarge;
+.correct:hover {
+    background-color: greenyellow;
+    color: white;
 }
 
 .incorrect {
@@ -26,4 +26,13 @@ button {
 
 #nameBox {
     border: solid 2px black;
+}
+
+.btn:hover {
+    background-color: purple;
+    color: white;
+}
+
+.hide{
+    display: none;
 }

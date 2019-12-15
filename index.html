@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="en">
   <head>
-    <title>Title</title>
+    <title>Coding Quiz</title>
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -15,21 +15,29 @@
   <body>
     <div class="container">
         <h1 class="welcome">Welcome to Coding Quiz!</h1><br>
+        <h3 class="hide highScoreContainer">High Score: <div id="highScore"></div> <div id="userHigh"></div>
+          <br><br>
+          <div id="userForm" class= "input-group">
+            <div class="input-group-prepend">
+              <span class="input-group-text" style="font-weight: bold;">Name</span>
+            </div>
+            <input id="user" type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-lg">
+          </div>
+          <button id="submit-btn" class="submit-btn btn" style="border: solid 1px black;">Submit Score</button>
+          <button id="clear-btn" class="clearStorage btn" style="border: solid 1px black;">Clear Scores</button>
+        </h3>
         <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Exercitationem sapiente animi dolor quibusdam natus iusto earum cumque vitae molestiae ducimus, quod cum labore veritatis aperiam voluptatum nemo id porro illo.
         Id magnam, quia error autem aut distinctio accusamus quaerat assumenda quidem placeat repellat sunt blanditiis ipsa. Omnis sapiente adipisci soluta quisquam non facilis error odio. Aut quisquam quaerat sequi id?
         Illum ea in blanditiis similique quas numquam molestias voluptatum quisquam at porro voluptate dolorem ab nulla illo eos perferendis accusantium, reiciendis corporis impedit? Voluptates assumenda illum blanditiis architecto nihil earum?</p>
         <button type="button" class="btn btn-primary startBtn"> Press to start </button>
             <div class="populateQuiz">
                 <h3 id="main"></h3>
-                    <!-- <br>
-                    <h2 class="row" id="correctOrNot"></h2> -->
                     <div id="scoreTitle">SCORE: 
                         <div id="score">
                         </div>
                     </div>
             </div>
-    </div>
-            
+        </div>
       
     <!-- Optional JavaScript -->
     <script src="questions.js"></script>
