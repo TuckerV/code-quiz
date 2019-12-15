@@ -6,10 +6,10 @@ var questions = [{
   {
     question: "Which of these indicate something is a string?",
     choices: ["STRONG", "STRING", "STRANG", "THANG"],
-    answer: 1
+    answer: 0
   },
   {
     question: "Not sure what to ask for this question, but choose c!",
     choices: ["Not this one dumbass", "Maybe this one?", "HERES THE ANSWER", "Also not an answer"],
-    answer: 2
+    answer: 0
   }];

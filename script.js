@@ -14,7 +14,7 @@
   var submitBtnEl = $("#submit-btn");
   var clearBtnEL = $("#clear-btn");
   var formEl = $("#userForm");
-  var userEl = $("#user")
+  var userEl = $("#user");
   
   submitBtnEl.click(sendScore);
   clearBtnEL.click(clearStorage);
@@ -32,7 +32,7 @@
   function startTimer() {
     // console.log(score);
     timerTime = setInterval(function(){
-      console.log("Timer at:" + score);
+      // console.log("Timer at:" + score);
         score--;
         $("#score").text(score);
       if (score === 0){
@@ -46,6 +46,12 @@
     changeQuestion(i);
     if (i < questions.length){
       $(".choices").on("click", function(){
+        //An attempt to check answers
+        // var currentAnswer =questions[i].answer;
+        // console.log(questions[i].choices[currentAnswer]);
+        // if (i < questions.length && $(event.target).text() === questions[i].choices[currentAnswer]){
+        //   alert("This is correct!");
+        // };
         changeQuestion(i);
         i++;
       });
@@ -117,7 +123,7 @@ function sendScore(){
     };
 
     usersARR.push(userJSON);    
-    usersARR.sort(function(a, b){return a.score-b.score});
+    usersARR.sort(function(a, b){return b.score-a.score});
     
     localStorage.setItem('usersARR', JSON.stringify(usersARR));
 
